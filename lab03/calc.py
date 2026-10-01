@@ -5,3 +5,5 @@ if sign == '+':
 	print(f'{num1}+{num2}={num1+num2}')
 elif sign == '-':
 	print(f'{num1}-{num2}={num1-num2}')
+elif sign == '*':
+	print(f'{num1}*{num2}={num1*num2}')
