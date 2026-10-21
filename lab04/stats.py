@@ -13,7 +13,11 @@ def parse_record(line: str) -> dict:
         temp = float(temp_str)
     except ValueError:
         print("Температура не является числом")
-    return city, temp, date
+    return {
+        "city": city,
+        "temperature": temperature,
+        "date": date,
+    }
 
 def read_valid(lines: list[str]) -> list[dict]:
     records = []
