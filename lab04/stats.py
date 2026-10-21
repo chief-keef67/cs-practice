@@ -15,7 +15,7 @@ def parse_record(line: str) -> dict:
         print("Температура не является числом")
     return {
         "city": city,
-        "temperature": temperature,
+        "temp": temp,
         "date": date,
     }
 
