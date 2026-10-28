@@ -15,10 +15,8 @@ def main():
 
     broken = counts.get("BROKEN", 0)
     error_count = counts.get("ERROR", 0)
-    total = sum(
-        count for level, count in counts.items()
-        if level != "BROKEN"
-    )
+
+    total = sum(counts.values())
 
     print(total)
     print(error_count)
