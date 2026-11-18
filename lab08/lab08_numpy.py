@@ -100,7 +100,6 @@ small_matrix[1:, 1:] = 9
 print("Изменённый small_matrix:")
 print(small_matrix)
 
-# Используем copy(), чтобы не менять исходный массив hours.
 changed_hours = hours.copy()
 
 changed_hours[2:5] = 99
@@ -109,7 +108,6 @@ changed_hours[::2] = -1
 print("changed_hours:", changed_hours)
 print("Исходный hours:", hours)
 
-# Копия нужна, чтобы изменения не затрагивали исходную матрицу.
 changed_matrix = matrix.copy()
 
 changed_matrix[1, :] = 0
@@ -121,3 +119,21 @@ print(changed_matrix)
 
 print("Исходная матрица:")
 print(matrix)
+
+#Задание 6.
+
+print("\nЗадание 6")
+
+numbers = np.arange(12)
+table = numbers.reshape(3, 4)
+transposed = table.T
+
+print("numbers:", numbers)
+print("table:")
+print(table)
+print("transposed:")
+print(transposed)
+
+print("Форма numbers:", numbers.shape)
+print("Форма table:", table.shape)
+print("Форма transposed:", transposed.shape)
