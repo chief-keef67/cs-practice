@@ -52,3 +52,36 @@ print(temperatures[:2, 1:])
 
 print("Центральный фрагмент 2x2:")
 print(temperatures[:2, 1:3])
+
+#Задание 4.
+
+matrix = np.arange(1, 26).reshape(5, 5)
+
+print("\nЗадание 4")
+print("Исходная матрица:")
+print(matrix)
+
+part1 = matrix[:3, :]
+print("Первые три строки:")
+print(part1)
+print("shape:", part1.shape)
+
+part2 = matrix[-2:, :]
+print("Последние две строки:")
+print(part2)
+print("shape:", part2.shape)
+
+part3 = matrix[:, :2]
+print("Первые два столбца:")
+print(part3)
+print("shape:", part3.shape)
+
+part4 = matrix[1:4, 2:5]
+print("Фрагмент строк 1-3 и столбцов 2-4:")
+print(part4)
+print("shape:", part4.shape)
+
+part5 = matrix[-2:, -2:]
+print("Правый нижний блок 2x2:")
+print(part5)
+print("shape:", part5.shape)
