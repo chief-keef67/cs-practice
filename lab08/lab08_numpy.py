@@ -19,3 +19,13 @@ print("line:", line)
 print("zeros:", zeros)
 print("unknown_table:\n", unknown_table)
 print("identity:\n", identity)
+
+#Задание 2.
+
+print("\nЗадание 2")
+
+print("Третий элемент:", hours[2])
+print("Последний элемент:", hours[-1])
+print("Индексы 2-5:", hours[2:6])
+print("Каждый второй элемент:", hours[::2])
+print("В обратном порядке:", hours[::-1])
