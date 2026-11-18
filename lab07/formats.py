@@ -7,14 +7,14 @@ def csv_to_records(text: str) -> list[dict]:
     if not lines:
         return []
 
-    headers = lines[0].split(",")
+    headers = [item.strip() for item in lines[0].split(",")]
     records = []
 
     for line in lines[1:]:
-        if not line:
+        if not line.strip():
             continue
 
-        values = line.split(",")
+        values = [item.strip() for item in line.split(",")]
         record = dict(zip(headers, values))
         records.append(record)
 
@@ -27,27 +27,24 @@ def parse_settings(lines: list[str]) -> dict:
     def convert_value(value):
         value = value.strip()
 
-        if value.isdigit() or (
-            value.startswith("-") and value[1:].isdigit()
-        ):
-            return int(value)
-
-        try:
-            if "." in value:
-                return float(value)
-        except ValueError:
-            pass
-
         if value.lower() in ("true", "yes"):
             return True
 
         if value.lower() in ("false", "no"):
             return False
 
-        return value
+        try:
+            return int(value)
+        except ValueError:
+            pass
+
+        try:
+            return float(value.replace(",", "."))
+        except ValueError:
+            return value
 
     for line in lines:
-        line = line.split("#")[0].rstrip()
+        line = line.split("#", 1)[0].rstrip()
 
         if not line.strip():
             continue
