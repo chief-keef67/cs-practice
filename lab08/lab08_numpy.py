@@ -29,3 +29,26 @@ print("Последний элемент:", hours[-1])
 print("Индексы 2-5:", hours[2:6])
 print("Каждый второй элемент:", hours[::2])
 print("В обратном порядке:", hours[::-1])
+
+#Задание 3.
+
+temperatures = np.array([
+    [12, 14, 13, 15],
+    [11, 13, 16, 17],
+    [10, 12, 15, 18]
+])
+
+print("\nЗадание 3")
+
+print("shape:", temperatures.shape)
+print("ndim:", temperatures.ndim)
+print("size:", temperatures.size)
+
+print("Вторая строка, третий столбец:", temperatures[1, 2])
+print("Первая строка:", temperatures[0])
+print("Последний столбец:", temperatures[:, -1])
+print("Первые две строки без первого столбца:")
+print(temperatures[:2, 1:])
+
+print("Центральный фрагмент 2x2:")
+print(temperatures[:2, 1:3])
